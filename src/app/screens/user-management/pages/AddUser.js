@@ -64,7 +64,7 @@ export default class AddUser extends Component {
             AsyncStorageItem.getData(StorageConstants.UserData).then(async (data) => {
                 console.log(data)
                 await this.setState({
-                    dataSource: data
+                    dataSource: Array.from(data)
                 })
             });
         } catch (error) {
